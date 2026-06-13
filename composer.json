@@ -1,0 +1,35 @@
+{
+    "name": "mzashah/laravel-api-starter",
+    "description": "Production-ready Laravel REST API starter with JWT auth and roles",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "tymon/jwt-auth": "^2.1",
+        "spatie/laravel-permission": "^6.0",
+        "darkaonline/l5-swagger": "^8.6",
+        "intervention/image": "^3.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": ["@php artisan package:discover --ansi"],
+        "test": "vendor/bin/pest"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
